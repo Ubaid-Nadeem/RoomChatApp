@@ -1,0 +1,30 @@
+.roompage{
+    background-color: #1289A7;
+   width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.link{
+    display: block;
+color: #c0392b;
+padding: 20px;
+text-decoration: none;
+}
+.link:hover{
+    color: #2f3640;
+    text-decoration: underline;
+}
+.roompage h1{
+    color: #2f3640;
+}
+
+.authpage{
+    background-color: white;
+    padding: 20px;
+    max-width: 80%;
+    /* width: fit-content; */
+    /* display: inline-block; */
+}
+

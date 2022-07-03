@@ -30,6 +30,12 @@ function Room(data) {
 
     useEffect(() => {
         return () => {
+
+
+
+
+
+
             socket.on('getRooms', (data) => {
                 setAllRooms(data)
             });
@@ -46,14 +52,15 @@ function Room(data) {
                 setCurrentRoom(data)
                 setName(data.Name)
                 setRoom(data.ID)
-            })
-            socket.on('joinRequest_reject', (data) => {
-              setTimeout(()=>{
-                alert('Room ID is not match')
-                setStatus(data.status)
-                setOpen(false)
+            });
 
-              },5000)
+            socket.on('joinRequest_reject', (data) => {
+                setTimeout(() => {
+                    alert('Room ID is not match')
+                    setStatus(data.status)
+                    setOpen(false)
+
+                }, 5000)
             })
         }
     }, [])
@@ -79,7 +86,7 @@ function Room(data) {
         }
         else {
             socket.emit("join_request", { room, name })
-            // console.log(room, name)
+            console.log(room, name)
             handleToggle()
         }
 
